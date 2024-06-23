@@ -1,9 +1,33 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import logo from '../Components/Assets/logo.png'
+import cart from '../Components/Assets/cart_icon.png'
 const Navbar = () => {
+  const [Menu,setMenu] = useState('Shop');
+  const li='transition duration-200 hover:cursor-pointer hover:text-gray-600 hover:border-b-2 hover:pb-2 hover:border-b-red-400';
+  const activeli='transition duration-200 hover:cursor-pointer border-b-2 pb-2 hover:text-gray-800 border-yellow-500';
   return (
-    <div>
-        
+    <div className='flex justify-around py-2 border-b-2 border-b-black hover:drop-shadow-lg'>
+        <div className='flex gap-4 items-center'>
+          <img src={logo} alt='' />
+          <p className='font-semibold text-2xl hover:cursor-pointer'>SHOPY</p>
+        </div>
+
+        <div className='flex items-center'>
+          <ul className='flex gap-8 items-center text-lg '>
+            <li className={Menu==='Shop'?activeli:li} onClick={()=>{setMenu('Shop')}}>Shop</li>
+            <li className={Menu==='Men'?activeli:li} onClick={()=>{setMenu('Men')}}>Men</li>
+            <li className={Menu==='Women'?activeli:li} onClick={()=>{setMenu('Women')}}>Women</li>
+            <li className={Menu==='Kids'?activeli:li} onClick={()=>{setMenu('Kids')}}>Kids</li>
+          </ul>
+        </div>
+
+        <div className='flex items-center gap-16'>
+        <button className="px-8 py-2 rounded-2xl bg-gray-600 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-gray-600">
+  Login
+</button>
+          <img src={cart} alt='' />
+          <div className='w-6 h-6 flex justify-center items-center mt-[-30px] ml-[-75px] rounded-full text-sm text-white bg-red-500'>0</div>
+        </div>
     </div>
   )
 }
