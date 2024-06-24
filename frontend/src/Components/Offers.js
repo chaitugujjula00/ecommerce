@@ -1,5 +1,4 @@
 import React from 'react'
-import arrow from '../Components/Assets/arrow.png'
 import exclusive_image from '../Components/Assets/exclusive_image.png'
 const Offers = () => {
   return (
@@ -10,7 +9,7 @@ const Offers = () => {
                 <p>for You</p>
             </div>
             <p>ONLY FOR BEST SELLER PRODUCTS</p>
-            <button className='w-56 px-auto gap-4 rounded-full bg-red-500 px-8 py-4'>CHECK NOW</button>
+            <button className='w-56 px-auto gap-4 rounded-full bg-red-500 px-8 py-4 border-2 border-red-500 transition duration-200 hover:scale-110 hover:bg-white hover:drop-shadow-xl'>CHECK NOW</button>
         </div>
 
         <div >
