@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Product = (props) => {
+const Item = (props) => {
     const item = props.item;
   return (
     <div className='flex flex-col gap-2'>
@@ -14,4 +14,4 @@ const Product = (props) => {
   )
 }
 
-export default Product
+export default Item
