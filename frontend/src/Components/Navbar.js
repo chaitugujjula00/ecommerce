@@ -7,7 +7,7 @@ const Navbar = () => {
   const li='transition duration-200 hover:cursor-pointer hover:text-gray-600 hover:border-b-2 hover:pb-2 hover:border-b-red-400';
   const activeli='transition duration-200 hover:cursor-pointer border-b-2 pb-2 hover:text-gray-800 border-yellow-500';
   return (
-    <div className='flex justify-around py-2 border-b-2 border-b-black hover:drop-shadow-lg'>
+    <div className='flex justify-around py-2 border-b-2 border-b-black bg-white hover:drop-shadow-lg sticky top-0 z-10'>
         <Link to='/'>
         <div className='flex gap-4 items-center hover:cursor-pointer'>
           <img src={logo} alt='' />
@@ -24,12 +24,12 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className='flex items-center gap-16'>
+        <div className='flex items-center gap-8'>
         <Link to='/login'><button className="px-8 py-2 rounded-2xl bg-gray-600 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-gray-600">
   Login
 </button></Link>
           <Link to='/cart'><img src={cart} alt='' /></Link>
-          <div className='w-6 h-6 flex justify-center items-center mt-[-30px] ml-[-75px] rounded-full text-sm text-white bg-red-500'>0</div>
+          <div className='w-6 h-6 flex justify-center items-center mt-[-25px] ml-[-45px] rounded-full text-sm text-white bg-red-500'>0</div>
         </div>
     </div>
   )

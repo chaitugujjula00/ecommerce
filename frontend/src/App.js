@@ -8,7 +8,7 @@ import LoginSignup from './Pages/LoginSignup';
 import Cart from './Pages/Cart';
 function App() {
   return (
-    <div>
+    <div >
      <BrowserRouter>
      <Navbar />
      <Routes>
