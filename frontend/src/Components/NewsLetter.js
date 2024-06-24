@@ -2,7 +2,7 @@ import React from 'react'
 
 const NewsLetter = () => {
   return (
-    <div className='flex flex-col gap-3 align-middle items-center h-[35vh] bg-gradient-to-b from-rose-300 to-white mx-40 py-8 mb-40 rounded-3xl'>
+    <div className='flex flex-col gap-3 align-middle items-center h-[35vh] bg-gradient-to-b  from-[#ffe2e2] to-white mx-40 py-8 mb-40 rounded-3xl'>
             <div className='text-[52px] text-wrap font-semibold'>
                 Get Exclusive Offers on Your Email
             </div>

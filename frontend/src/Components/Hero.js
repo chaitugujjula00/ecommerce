@@ -4,7 +4,7 @@ import hand_icon from '../Components/Assets/hand_icon.png'
 import hero_image from '../Components/Assets/hero_image.png'
 const Hero = () => {
   return (
-    <div className='flex justify-around items-center h-[90vh] bg-gradient-to-b from-rose-300 to-white'>
+    <div className='flex justify-around items-center h-[90vh] bg-gradient-to-b from-[#ffe2e2] to-white'>
         <div className='text-wrap flex flex-col gap-4'>
             <p className='text-[26px] font-bold'>NEW ARRIVALS ONLY</p>
             <div className='text-[64px] text-wrap font-semibold flex flex-col items-start'>
