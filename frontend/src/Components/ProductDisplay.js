@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import star_icon from './Assets/star_icon.png'
 import star_dull_icon from './Assets/star_dull_icon.png'
+import { ShopContext } from '../Context/ShopContext';
 const ProductDisplay = (props) => {
     const {product} = props;
+    const {addToCart} = useContext(ShopContext);
   return (
     <div className='mx-32 my-8 flex gap-20 mt-12'>
         <div className='flex gap-4'>
@@ -45,7 +47,7 @@ const ProductDisplay = (props) => {
                     <div className='border border-black rounded-sm text-md font-semibold pl-[6px] py-2 w-10 transition duration-200 hover:bg-gray-200 hover:cursor-pointer'>XXL</div>
                 </div>
             </div>
-            <button className='w-48 rounded-2xl bg-red-500 border-2 border-red-500 px-4 py-2 transition-all duration-300 hover:bg-white hover:text-red-500 hover:drop-shadow-lg hover:scale-[1.01]'>Add to Cart</button>
+            <button className='w-48 rounded-2xl bg-red-500 border-2 border-red-500 px-4 py-2 transition-all duration-300 hover:bg-white hover:text-red-500 hover:drop-shadow-lg hover:scale-[1.01]' onClick={()=>{addToCart(product.id)}}>Add to Cart</button>
             <p className='text-gray-500'><span className='font-bold text-black mr-2'>Category :</span>Women, T-shirt, Crop Top</p>
             <p className='text-gray-500'><span className='font-bold text-black mr-2'>Tags :</span>Modren, Latest</p>
         </div>

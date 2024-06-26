@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import dropdown_icon from '../Components/Assets/dropdown_icon.png'
 import Item from '../Components/Item'
-import { Link } from 'react-router-dom';
 const ShopCategory = (props) => {
   const {all_product} = useContext(ShopContext);
   return (
@@ -19,7 +18,7 @@ const ShopCategory = (props) => {
 
       <div className='grid grid-cols-4 gap-8'>
         {all_product.map(item=>(
-          props.category===item.category ? <Link to={`/product/${item.id}`}> <Item item={item}/> </Link>  :null
+          props.category===item.category ?  <Item item={item}/> :null
         ))}
       </div>
 
