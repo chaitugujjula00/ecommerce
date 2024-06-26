@@ -37,17 +37,17 @@ const ProductDisplay = (props) => {
             </div>
             <div>
                 <h1>Select Size</h1>
-                <div>
-                    <div>S</div>
-                    <div>M</div>
-                    <div>L</div>
-                    <div>XL</div>
-                    <div>XXL</div>
+                <div className='flex gap-2 '>
+                    <div className='border border-black rounded-sm text-sm font-semibold px-2 py-1 transition duration-200 hover:bg-gray-200 hover:cursor-pointer'>S</div>
+                    <div className='border border-black rounded-sm text-sm font-semibold px-2 py-1 transition duration-200 hover:bg-gray-200 hover:cursor-pointer'>M</div>
+                    <div className='border border-black rounded-sm text-sm font-semibold px-2 py-1 transition duration-200 hover:bg-gray-200 hover:cursor-pointer'>L</div>
+                    <div className='border border-black rounded-sm text-sm font-semibold px-2 py-1 transition duration-200 hover:bg-gray-200 hover:cursor-pointer'>XL</div>
+                    <div className='border border-black rounded-sm text-sm font-semibold px-2 py-1 transition duration-200 hover:bg-gray-200 hover:cursor-pointer'>XXL</div>
                 </div>
             </div>
-            <button>Add to Cart</button>
-            <p><span>Category :</span>Women, T-shirt, Crop Top</p>
-            <p><span>Tags :</span>Modren, Latest</p>
+            <button className='w-48 rounded-2xl bg-red-500 border-2 border-red-500 px-4 py-2 transition-all duration-300 hover:bg-white hover:text-red-500 hover:drop-shadow-lg hover:scale-[1.01]'>Add to Cart</button>
+            <p className='text-gray-500'><span className='font-bold text-black mr-2'>Category :</span>Women, T-shirt, Crop Top</p>
+            <p className='text-gray-500'><span className='font-bold text-black mr-2'>Tags :</span>Modren, Latest</p>
         </div>
     </div>
   )
