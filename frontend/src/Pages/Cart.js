@@ -32,7 +32,7 @@ const Cart = () => {
       </div>
 
       <div className='my-20 flex justify-between'>
-        <div className='flex flex-col gap-4 w-[40%] font-light'>
+        <div className='flex flex-col gap-4 w-[45%] font-light'>
           <h1 className='text-3xl font-bold'>Cart Totals</h1>
           <div className='flex justify-between'>
             <p>Subtotal</p>
@@ -50,10 +50,10 @@ const Cart = () => {
           </div>
         </div>
         <div className='flex flex-col gap-8 items-start w-[50%]'>
-          <p>If you have a promo code, Enter it here</p>
+          <p className='pl-6 font-semibold'>If you have a promo code, Enter it here</p>
           <div class="flex gap-0 rounded-full">
-            <input class="rounded-l-full pl-8 w-[400px] py-2 border bg-gray-100 border-black" type="code" placeholder="PROMO CODE"/>
-            <button class="rounded-full bg-[#4d4d4d] text-white border-2 border-[#4d4d4d] px-8 py-4 ml-[-70px] transition duration-200 hover:bg-white hover:text-[#4d4d4d] hover:drop-shadow">Submit</button>
+            <input class="rounded-l-full pl-6 w-[400px] border bg-gray-100 border-black" type="code" placeholder="PROMO CODE"/>
+            <button class="rounded-full bg-[#4d4d4d] text-white border-2 border-[#4d4d4d] px-8 py-3 ml-[-70px] transition duration-200 hover:bg-white hover:text-[#4d4d4d] hover:drop-shadow">Submit</button>
             </div>
         </div>
       </div>
