@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '../Components/Assets/logo.png'
 import cart from '../Components/Assets/cart_icon.png'
 import { Link } from 'react-router-dom';
+import { ShopContext } from '../Context/ShopContext';
 const Navbar = () => {
   const [Menu,setMenu] = useState('Shop');
+  const {getTotalCartItems} = useContext(ShopContext);
   const li='transition duration-200 hover:cursor-pointer hover:text-gray-600 hover:border-b-2 hover:pb-2 hover:border-b-red-400';
   const activeli='transition duration-200 hover:cursor-pointer border-b-2 pb-2 hover:text-gray-800 border-yellow-500';
   return (
@@ -29,7 +31,7 @@ const Navbar = () => {
   Login
 </button></Link>
           <Link to='/cart'><img src={cart} alt='' /></Link>
-          <div className='w-6 h-6 flex justify-center items-center mt-[-25px] ml-[-45px] rounded-full text-sm text-white bg-red-500'>0</div>
+          <div className='w-6 h-6 flex justify-center items-center mt-[-25px] ml-[-45px] rounded-full text-sm text-white bg-red-500'>{getTotalCartItems()}</div>
         </div>
     </div>
   )
