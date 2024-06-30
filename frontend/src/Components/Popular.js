@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Item from './Item';
 
 const Popular = () => {
-  const [data_product,setData_product] = useState();
+  const [data_product,setData_product] = useState([]);
   useEffect(()=>{
     fetch('http://localhost:4000/popularinwomen')
     .then((res)=>res.json())

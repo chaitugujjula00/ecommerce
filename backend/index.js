@@ -36,7 +36,7 @@ app.use('/images',express.static('upload/images'))
 app.post('/upload',upload.single('product'),(req,res)=>{
     res.json({
         success:1,
-        image_url:`https://localhost:${port}/images/${req.file.filename}`
+        image_url:`http://localhost:${port}/images/${req.file.filename}`
     })
 })
 
@@ -232,10 +232,13 @@ const fetchUser = async (req,res,next)=>{
 //creating endpoint for adding products in cartData
 app.post('/addtocart',fetchUser, async(req,res)=>{
     console.log("Added",req.body.itemId)
-    let userData = await Users.findOne({_id:req.user.id})
-    if(userData.cartData[req.body.itemId]>0)
+    try{
+        let userData = await Users.findOne({_id:req.user.id})
     userData.cartData[req.body.itemId] +=1;
     await Users.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData})
+    }catch{
+        console.log(error);
+    }
     res.send("Added")
 })
 

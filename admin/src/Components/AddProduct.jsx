@@ -65,7 +65,7 @@ const AddProduct = () => {
         </div>
         <div>
             <p className='block tracking-wide text-gray-700 text-lg font-bold mb-2'>Product Category</p>
-            <select class="block appearance-none w-1/5 bg-gray-200 text-gray-700 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"  value={productDetails.category} onChange={changeHandler} name="category">
+            <select className="block appearance-none w-1/5 bg-gray-200 text-gray-700 border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"  value={productDetails.category} onChange={changeHandler} name="category">
                 <option value="women">Women</option>
                 <option value="men">Men</option>
                 <option value="Kid">Kids</option>
@@ -77,7 +77,7 @@ const AddProduct = () => {
             </label>
             <input onChange={imageHandler} type='file' name='image' id='file-input' hidden/>
         </div>
-        <button className='w-1/4 mx-auto bg-gray-500 text-white font-bold py-2 px-4 border border-gray-700 rounded-lg transition duration-200 hover:bg-gray-700' onClick={Add_Product}>ADD2</button>
+        <button className='w-1/4 mx-auto bg-gray-500 text-white font-bold py-2 px-4 border border-gray-700 rounded-lg transition duration-200 hover:bg-gray-700' onClick={Add_Product}>ADD</button>
     </div>
   )
 }

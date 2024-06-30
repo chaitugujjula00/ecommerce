@@ -39,7 +39,7 @@ const ShopContextProvider = (props) =>{
             fetch('http://localhost:4000/addtocart',{
                 method:'POST',
                 headers:{
-                    Acceppt:'application/form-dat',
+                    Accept:'application/form-data',
                     'auth-token':`${localStorage.getItem('auth-token')}`,
                     'Content-Type':'application/json'
                 },
@@ -56,7 +56,7 @@ const ShopContextProvider = (props) =>{
             fetch('http://localhost:4000/removefromcart',{
                 method:'POST',
                 headers:{
-                    Acceppt:'application/form-dat',
+                    Accept:'application/form-data',
                     'auth-token':`${localStorage.getItem('auth-token')}`,
                     'Content-Type':'application/json'
                 },
