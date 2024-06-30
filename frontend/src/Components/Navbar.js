@@ -27,9 +27,14 @@ const Navbar = () => {
         </div>
 
         <div className='flex items-center gap-8'>
-        <Link to='/login'><button className="px-8 py-2 rounded-2xl bg-gray-600 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-gray-600">
-  Login
-</button></Link>
+          {localStorage.getItem('auth-token')
+          ?<button onClick={()=>{localStorage.removeItem('auth-token');window.location.replace('/')}} className="px-8 py-2 rounded-2xl bg-gray-600 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-gray-600">
+            Logout
+          </button>
+          :<Link to='/login'><button className="px-8 py-2 rounded-2xl bg-gray-600 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-gray-600">
+          Login
+        </button></Link>}
+        
           <Link to='/cart'><img src={cart} alt='' /></Link>
           <div className='w-6 h-6 flex justify-center items-center mt-[-25px] ml-[-45px] rounded-full text-sm text-white bg-red-500'>{getTotalCartItems()}</div>
         </div>
