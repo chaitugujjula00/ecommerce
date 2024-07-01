@@ -47,16 +47,6 @@ An eCommerce platform built using the MERN stack (MongoDB, Express.js, React.js,
    npm install
    ```
 
-## Setup Environment Variables
-
-Create a `.env` file in the `backend` directory and add the following:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
-```
-
 ## Running the Application
 
 1. Start the backend server:
