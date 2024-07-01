@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Item from './Item.js'
-import { useSearchParams } from 'react-router-dom'
 
 const NewCollections = () => {
   const [new_collections,setNew_collections] = useState([]);

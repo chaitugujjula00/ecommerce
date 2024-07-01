@@ -12,7 +12,7 @@ const Hero = () => {
                 <p>new collections</p>
                 <p>for urself</p>
             </div>
-            <button className='w-60 flex items-center align-middle gap-4 rounded-full bg-red-500 px-8 py-4 transition-all duration-300 hover:gap-9'>Latest collection <img src={arrow}/></button>
+            <button className='w-60 flex items-center align-middle gap-4 rounded-full bg-red-500 px-8 py-4 transition-all duration-300 hover:gap-9'>Latest collection <img src={arrow} alt=''/></button>
         </div>
 
         <div >

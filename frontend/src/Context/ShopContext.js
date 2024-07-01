@@ -69,7 +69,7 @@ const ShopContextProvider = (props) =>{
 
     const getTotalCost = () => {
         let totalCost=0;
-        all_product.map(item=>{
+        for(const item in all_product){
             if(cartItems[item.id]>0){
                 totalCost+=(cartItems[item.id]*item.new_price)
             }

@@ -23,7 +23,7 @@ const Cart = () => {
             <p className='w-[12.5%]'>${item.new_price}</p>
             <p className='w-[12.5%]'>{cartItems[item.id]}</p>
             <p className='w-[12.5%]'>${cartItems[item.id]*item.new_price}</p>
-            <button className='w-[12.5%] px-6 hover:cursor-pointer' onClick={()=>{removeFromCart(item.id)}}><img  src={cart_cross_icon}/></button>
+            <button className='w-[12.5%] px-6 hover:cursor-pointer' onClick={()=>{removeFromCart(item.id)}}><img  src={cart_cross_icon} alt=''/></button>
           </div>
           <hr className='h-[3px] my-4 bg-gray-400'/>
         </div>
