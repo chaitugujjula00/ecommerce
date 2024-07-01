@@ -28,9 +28,9 @@ const ListProduct = () => {
   }
 
   return (
-    <div className='mx-auto my-10 w-[900px]'>
+    <div className='mx-auto mt-10 w-[900px]'>
       <h1 className='text-3xl font-bold'>All Products List</h1>
-      <div className='flex justify-between my-6 text-lg font-light'>
+      <div className='flex justify-between my-6 text-lg font-light pr-4'>
         <p className='w-[12.5%]'>Products</p>
         <p className='w-[30%]'>Title</p>
         <p>Old Price</p>
@@ -40,9 +40,9 @@ const ListProduct = () => {
       </div>
       <div>
         <hr className='mb-1' />
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-2 h-[550px] overflow-y-scroll'>
         {allProducts.map((product,index)=>{
-          return <div key={index} className='flex justify-between my-6 h-20'>
+          return <div key={index} className='flex justify-between my-4 h-20'>
             <div className=' h-20 w-[10%]'><img src={product.image} /></div>
             <p className='w-[30%] text-wrap'>{product.name}</p>
             <p>${product.old_price}</p>
