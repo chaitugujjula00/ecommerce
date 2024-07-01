@@ -73,7 +73,7 @@ const ShopContextProvider = (props) =>{
             if(cartItems[item.id]>0){
                 totalCost+=(cartItems[item.id]*item.new_price)
             }
-        })
+        }
         return totalCost
     }
 
