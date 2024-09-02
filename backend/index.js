@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 //Database Connection with MongoDB
-mongoose.connect('mongodb+srv://godofstroies:ecommerce@cluster.dzk9vuv.mongodb.net/e-commerce?retryWrites=true&w=majority&appName=cluster')
+mongoose.connect('mongodb+srv://godofstroies:ecommerce@cluster.dzk9vuv.mongodb.net/?retryWrites=true&w=majority&appName=cluster')
 
 //API Creation
 app.get('/',(req, res)=>{
