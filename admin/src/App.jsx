@@ -4,7 +4,7 @@ import Admin from './Pages/Admin'
 const App = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Admin />
     </div>
   )

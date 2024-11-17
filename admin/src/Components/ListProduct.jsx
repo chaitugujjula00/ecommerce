@@ -28,32 +28,47 @@ const ListProduct = () => {
   }
 
   return (
-    <div className='mx-auto mt-10 w-[900px]'>
-      <h1 className='text-3xl font-bold'>All Products List</h1>
-      <div className='flex justify-between my-6 text-lg font-light pr-4'>
-        <p className='w-[12.5%]'>Products</p>
-        <p className='w-[30%]'>Title</p>
-        <p>Old Price</p>
-        <p>New Price</p>
-        <p>Category</p>
-        <p>Remove</p>
-      </div>
-      <div>
-        <hr className='mb-1' />
-        <div className='flex flex-col gap-2 h-[550px] overflow-y-scroll'>
-        {allProducts.map((product,index)=>{
-          return <div key={index} className='flex justify-between my-4 h-20'>
-            <div className=' h-20 w-[10%]'><img src={product.image} /></div>
-            <p className='w-[30%] text-wrap'>{product.name}</p>
-            <p>${product.old_price}</p>
-            <p>${product.new_price}</p>
-            <p>{product.category}</p>
-            <img className='h-4 mx-6' onClick={()=>{remove_product(product.id)}} src={cross_icon} />
-          </div>
-        })}
+    <div className="mx-auto mt-10 px-4 w-full max-w-[900px]">
+  <h1 className="text-2xl font-bold text-center mb-6">All Products List</h1>
+  <div className="hidden sm:grid sm:grid-cols-[1fr_2fr_repeat(3,minmax(0,1fr))_auto] bg-gray-100 p-4 rounded-lg text-sm font-medium text-gray-600">
+    <p>Product</p>
+    <p>Title</p>
+    <p>Old Price</p>
+    <p>New Price</p>
+    <p>Category</p>
+    <p>Action</p>
+  </div>
+  <div className="flex flex-col gap-4 mt-4">
+    {allProducts.map((product, index) => (
+      <div
+        key={index}
+        className="grid sm:grid-cols-[1fr_2fr_repeat(3,minmax(0,1fr))_auto] items-center gap-4 p-4 bg-white rounded-lg shadow-md"
+      >
+        <div className="h-16 w-16 flex-shrink-0">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="h-full w-full object-cover rounded-md border"
+          />
         </div>
+        <p className="text-sm font-medium text-gray-700 sm:truncate">
+          {product.name}
+        </p>
+        <p className="text-sm text-gray-600">${product.old_price}</p>
+        <p className="text-sm text-gray-600">${product.new_price}</p>
+        <p className="text-sm text-gray-600">{product.category}</p>
+        <button
+          onClick={() => remove_product(product.id)}
+          className="text-purple-600 hover:text-purple-800"
+        >
+          ✖
+        </button>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
+
   )
 }
 
