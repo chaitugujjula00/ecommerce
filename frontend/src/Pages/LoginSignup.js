@@ -55,23 +55,77 @@ const LoginSignup = () => {
   }
 
   return (
-    <div className='flex flex-col gap-4 mx-[400px] my-[100px] p-8 rounded-lg hover:drop-shadow-xl bg-[#ffe2e2]'>
-      <div className='text-3xl font-bold'>{state}</div>
-      <div className='flex flex-col gap-5 items-center text-xl' >
-        { state==='Sign Up' ?<input className='px-2 py-3 rounded-lg w-[100%] hover:drop-shadow-md' type='text' name='username' value={formData.username} onChange={ChangeHandler} placeholder='Your Name'/>:<></>}
-        <input className='px-2 py-3 rounded-lg w-[100%] hover:drop-shadow-md' type='text' name='email' value={formData.email} onChange={ChangeHandler} placeholder='Email'/>
-        <input className='px-2 py-3 rounded-lg w-[100%] hover:drop-shadow-md' type='text' name='password' value={formData.password} onChange={ChangeHandler} placeholder='password'/>
-        <button onClick={()=>{state==='Login' ? login() : signup()}} className='px-1 py-2 rounded-lg w-[40%] bg-[#6fe28a] border-2 transition duration-200 hover:scale-105 hover:drop-shadow-lg hover:border-[#50e17d] hover:bg-white '>Continue</button>
-      </div>
-      {state==='Sign Up' ?
-        <div>Already have an account? <span className='font-semibold text-red-500 hover:cursor-pointer' onClick={()=>{SetState('Login')}}>Login Here</span></div>
-        :<div>Create an account? <span className='font-semibold text-red-500 hover:cursor-pointer' onClick={()=>{SetState('Sign Up')}}>Click Here</span></div>
-      }
-      <div className='flex gap-3'>
-        <input type='checkbox' name='' id='' />
-        <p>By Continuing I agree to the terms of use & privacy policy.</p>
-      </div>
+    <div className='flex flex-col gap-4 mx-auto my-12 p-6 sm:p-8 rounded-lg hover:drop-shadow-xl bg-[#ffe2e2] max-w-lg w-full'>
+  <div className='text-3xl font-bold'>{state}</div>
+  <div className='flex flex-col gap-5 items-center text-xl'>
+    {state === 'Sign Up' ? (
+      <input
+        className='px-4 py-3 rounded-lg w-full hover:drop-shadow-md'
+        type='text'
+        name='username'
+        value={formData.username}
+        onChange={ChangeHandler}
+        placeholder='Your Name'
+      />
+    ) : (
+      <></>
+    )}
+    <input
+      className='px-4 py-3 rounded-lg w-full hover:drop-shadow-md'
+      type='text'
+      name='email'
+      value={formData.email}
+      onChange={ChangeHandler}
+      placeholder='Email'
+    />
+    <input
+      className='px-4 py-3 rounded-lg w-full hover:drop-shadow-md'
+      type='password'
+      name='password'
+      value={formData.password}
+      onChange={ChangeHandler}
+      placeholder='Password'
+    />
+    <button
+      onClick={() => {
+        state === 'Login' ? login() : signup();
+      }}
+      className='px-6 py-3 rounded-lg w-full sm:w-[40%] bg-[#6fe28a] border-2 transition duration-200 hover:scale-105 hover:drop-shadow-lg hover:border-[#50e17d] hover:bg-white'
+    >
+      Continue
+    </button>
+  </div>
+  {state === 'Sign Up' ? (
+    <div>
+      Already have an account?{' '}
+      <span
+        className='font-semibold text-red-500 hover:cursor-pointer'
+        onClick={() => {
+          SetState('Login');
+        }}
+      >
+        Login Here
+      </span>
     </div>
+  ) : (
+    <div>
+      Create an account?{' '}
+      <span
+        className='font-semibold text-red-500 hover:cursor-pointer'
+        onClick={() => {
+          SetState('Sign Up');
+        }}
+      >
+        Click Here
+      </span>
+    </div>
+  )}
+  <div className='flex gap-3'>
+    <input type='checkbox' name='' id='' />
+    <p>By Continuing I agree to the terms of use & privacy policy.</p>
+  </div>
+</div>
+
   )
 }
 
